@@ -17,7 +17,6 @@ onMounted(async ()=>{
   } catch (error) {
     settingComponent.value.showSettingDialog = true
   }
-  
 })
 // console.log(api);
 
