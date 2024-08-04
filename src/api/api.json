@@ -1,0 +1,50 @@
+{
+    "getServerInfo": {
+        "method": "get",
+        "url": "/api/v1/info"
+    },
+    "resolveARequest": {
+        "method": "post",
+        "url": "/api/v1/resolve"
+    },
+    "createATask": {
+        "method": "post",
+        "url": "/api/v1/tasks"
+    },
+    "getTaskList": {
+        "method": "get",
+        "url": "/api/v1/tasks"
+    },
+    "deleteTasks": {
+        "method": "delete",
+        "url": "/api/v1/tasks"
+    },
+    "createABatchOfTasks": {
+        "method": "post",
+        "url": "/api/v1/tasks/batch"
+    },
+    "getTaskInfo": {
+        "method": "get",
+        "url": "/api/v1/tasks/{id}"
+    },
+    "deleteATask": {
+        "method": "delete",
+        "url": "/api/v1/tasks/{id}"
+    },
+    "pauseATask": {
+        "method": "put",
+        "url": "/api/v1/tasks/{id}/pause"
+    },
+    "continueATask": {
+        "method": "put",
+        "url": "/api/v1/tasks/{id}/continue"
+    },
+    "pauseAllTasks": {
+        "method": "put",
+        "url": "/api/v1/tasks/pause"
+    },
+    "continueAllTasks": {
+        "method": "put",
+        "url": "/api/v1/tasks/continue"
+    }
+}
