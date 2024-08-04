@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue3-vite',
+  base: '/gopeed-web-console',
   build:{
     outDir: './docs',
     emptyOutDir: true
