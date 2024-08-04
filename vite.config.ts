@@ -7,7 +7,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/gopeed-web-console',
+  base: '/vue3-vite',
+  build:{
+    outDir: './docs',
+    emptyOutDir: true
+  },
   plugins: [
     vue(),
     vueJsx(),
