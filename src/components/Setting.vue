@@ -12,6 +12,8 @@ onMounted(()=>{
   formData.value = {baseUrl:baseUrl.value,apiKey:apiKey.value}
 })
 
+defineExpose({showSettingDialog})
+
 const comfirm = async ()=>{
     baseUrl.value = formData.value.baseUrl
     apiKey.value = formData.value.apiKey

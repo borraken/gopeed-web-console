@@ -7,11 +7,17 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import api from '../api/http'
 const baseUrl = ref('')
 const apiKey = ref('')
+const settingComponent = ref(null)
 
-onMounted(()=>{
+onMounted(async ()=>{
   baseUrl.value = localStorage.getItem("baseUrl") || '127.0.0.1:9999'
   apiKey.value = localStorage.getItem("apiKey") || ''
-  getTaskList()
+  try {
+    await getTaskList()
+  } catch (error) {
+    settingComponent.value.showSettingDialog = true
+  }
+  
 })
 // console.log(api);
 
@@ -49,7 +55,7 @@ const searchTask = ()=>{
 <template>
   <div class="bg">
     <header style="">
-      <Setting @getTaskList="getTaskList" />
+      <Setting @getTaskList="getTaskList" ref="settingComponent"/>
       <el-button type="primary" @click="getTaskList()" style="margin-left: 12px" >刷新</el-button>
       <Delete @getTaskList="getTaskList" :selectionTask="selectionTask"/>
       <el-button type="success" @click="continueTask()" >选中继续</el-button>
